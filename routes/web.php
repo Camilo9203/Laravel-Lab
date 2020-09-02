@@ -9,6 +9,7 @@ Route::get ('/portfolio', 'PortfolioController@index')->name('portfolio');
 Route::view ('/contact', 'contact')->name('contact');
 
 
+Route::post('contact', 'ControladorMensaje@store');
 
 // Route::view ('projects', 'PortFolioController')->except(['index', 'show']);
 
