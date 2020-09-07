@@ -49,7 +49,10 @@ class ProjectController extends Controller
     {
         
  
-        return view('projects.create');
+        return view('projects.create', [
+            
+            'project' => new Project
+        ]);
 
 
     }
@@ -57,12 +60,12 @@ class ProjectController extends Controller
     public function store (SaveProjectRequest $request){
 
         //Validad datos del formulario
-        // $fields = request()->validate([
+            // $fields = request()->validate([
 
-        //     'title' => 'required',
-        //     'url' => 'required',
-        //     'description' => 'required'
-        // ]);
+            //     'title' => 'required',
+            //     'url' => 'required',
+            //     'description' => 'required'
+            // ]);
 
 
         //Devuelve todo los campos del modelos
@@ -71,7 +74,7 @@ class ProjectController extends Controller
             //Project::create(request()->only('title', 'url', 'description'));
         
         //Envia datos validados
-        Project::create($request->validate());
+        Project::create($request->validated());
 
         // Variables del modelo project    
         // return Project::create([
@@ -96,8 +99,15 @@ class ProjectController extends Controller
    
     public function update(Project $project, SaveProjectRequest $request)
     {
-        $project->update (request()->validate());
         
+        $project->update ($request->validated());
+
         return redirect()->route('projects.show', $project);
+    }
+
+    public function destroy(Project $project)
+    {
+        $project->delete();        
+        return redirect()->route('projects.index');
     }
 }

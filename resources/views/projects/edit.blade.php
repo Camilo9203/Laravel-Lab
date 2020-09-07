@@ -10,21 +10,11 @@
     {{-- Formulario de creación de projecto --}}
     <form method="POST" action="{{ route('projects.update', $project) }}">
         
-        @csrf @method('PATCH')
-        <labe>
-            Titulo del projecto <br>
-            <input type="text" name="title" value="{{ old('title', $project->title) }}"> 
-        </label><br>
+        @method('PATCH')
         
-        <label>
-            URL del proyecto <br>
-            <input type="text" name="url" value="{{ old ('url', $project->url) }}"> 
-        </label><br>
-        <label>
-            Descripción del proyecto <br>
-            <textarea name="description" id="" cols="30" rows="10">{{ old('description', $project->description )}}</textarea>
-        </label><br>
-        <button>Actualizar</button>
+        @include('projects._form', ['btnText' => 'Actualizar'])
+        
+        
     </form>
 
 @endsection

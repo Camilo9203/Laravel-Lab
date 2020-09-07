@@ -11,8 +11,9 @@ class MessageController extends Controller
     
     public function store(Request $request)
     {
-        //return $request -> get('name');
-        //return Request('name');
+        //Imprimir datos 
+            //return $request -> get('name');
+            //return Request('name');
         
         //Validar datos
         $msg = request()->validate ([
@@ -30,7 +31,7 @@ class MessageController extends Controller
         
         Mail::to('camilorios.h92@gmail.com')->queue(new MessageReceived($msg));
 
-        // return new MensajeRecibido($msg);
+        // return new MessageReceived($msg);
 
         return 'Mensaje Recibido';
     }

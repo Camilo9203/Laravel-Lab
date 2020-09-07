@@ -6,6 +6,7 @@
     <h1>Portfolio</h1>
 
     <a href="{{ route('projects.create') }}"> Crear Projecto</a>
+    
     <ul>
               
         @forelse ($projects as $project)

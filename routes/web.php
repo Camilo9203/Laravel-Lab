@@ -6,18 +6,22 @@
 Route::view ('/', 'home')->name('home');
 Route::view ('/about', 'about')->name('about');
 
-Route::get ('/portafolio', 'ProjectController@index')->name('projects.index');
-Route::get ('/portafolio/crear', 'ProjectController@create')->name('projects.create');
-Route::get ('/portafolio/{project}/editar', 'ProjectController@edit')->name('projects.edit');
-Route::patch ('/portafolio/{project}', 'ProjectController@update')->name('projects.update');
+Route::resource('portafolio', 'ProjectController')
+    ->names('projects')
+    ->parameters(['portafolio' => 'project']);
 
+// Las siete rutas REST 
 
-Route::get ('/portafolio/{project}', 'ProjectController@show')->name('projects.show');
-
-Route::post ('/portafolio', 'ProjectController@store')->name('projects.store');
-
+    // Route::get ('/portafolio', 'ProjectController@index')->name('projects.index');
+    // Route::get ('/portafolio/crear', 'ProjectController@create')->name('projects.create');
+    // Route::get ('/portafolio/{project}/editar', 'ProjectController@edit')->name('projects.edit');
+    // Route::patch ('/portafolio/{project}', 'ProjectController@update')->name('projects.update');
+    // Route::post ('/portafolio', 'ProjectController@store')->name('projects.store');
+    // Route::get ('/portafolio/{project}', 'ProjectController@show')->name('projects.show');
+    // Route::delete ('/portafolio/{project}', 'ProjectController@destroy')->name('projects.destroy');
 Route::post ('contact', 'MessageController@store')-> name('messages.store');
 Route::view('/contacto', 'contact')->name('contact');
+
 // Route::view ('projects', 'PortFolioController')->except(['index', 'show']);
 
     //Route::view('/', 'home')->name('home'); // Politicas de privacidad, terminos y condiciones 
