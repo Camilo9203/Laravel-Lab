@@ -1,8 +1,8 @@
 <?php
 
-function setActive ($routeName){
+    function setActive ($routeName){
 
-    return 'Procesado';
+    return 'Procesado';    
     return request()->routeIs('$routeName') ? 'active' : '';
     
 }

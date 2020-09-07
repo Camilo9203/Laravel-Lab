@@ -1,7 +1,7 @@
 @extends('layout')
 @section('title','Contact')
 @section('content')
-    <h1>Contant</h1>
+    <h1>{{ __('Contact') }}</h1>
 
     {{-- @if ($errors->any())
         <ul>
@@ -14,7 +14,7 @@
     @endif --}}
 
     
-    <form action="{{ route('contact')}}" method="POST">
+    <form action="{{ route('messages.store')}}" method="POST">
         
         @csrf 
         <input type="" name="name" placeholder="Nombre..." id="" value="{{ old('name') }}"><br>
@@ -29,7 +29,7 @@
         <textarea name="content" id="" cols="30" rows="10" placeholder="Mensaje...">{{ old('content') }}</textarea><br>
         {!! $errors->first ('content', '<small>:message</small><br>') !!} 
 
-        <button>Enviar</button><br>
+        <button>@lang('Send')</button><br>
 
     </form>
 

@@ -1,16 +1,23 @@
 <?php
-
+    
 
 //8. Envio de Variables atravez de URL's
 
 Route::view ('/', 'home')->name('home');
 Route::view ('/about', 'about')->name('about');
-Route::get ('/portfolio', 'PortfolioController@index')->name('portfolio');
-Route::view ('/contact', 'contact')->name('contact');
+
+Route::get ('/portafolio', 'ProjectController@index')->name('projects.index');
+Route::get ('/portafolio/crear', 'ProjectController@create')->name('projects.create');
+Route::get ('/portafolio/{project}/editar', 'ProjectController@edit')->name('projects.edit');
+Route::patch ('/portafolio/{project}', 'ProjectController@update')->name('projects.update');
 
 
-Route::post('contact', 'ControladorMensaje@store');
+Route::get ('/portafolio/{project}', 'ProjectController@show')->name('projects.show');
 
+Route::post ('/portafolio', 'ProjectController@store')->name('projects.store');
+
+Route::post ('contact', 'MessageController@store')-> name('messages.store');
+Route::view('/contacto', 'contact')->name('contact');
 // Route::view ('projects', 'PortFolioController')->except(['index', 'show']);
 
     //Route::view('/', 'home')->name('home'); // Politicas de privacidad, terminos y condiciones 
