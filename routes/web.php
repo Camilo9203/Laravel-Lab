@@ -11,7 +11,6 @@ Route::resource('portafolio', 'ProjectController')
     ->parameters(['portafolio' => 'project']);
 
 // Las siete rutas REST 
-
     // Route::get ('/portafolio', 'ProjectController@index')->name('projects.index');
     // Route::get ('/portafolio/crear', 'ProjectController@create')->name('projects.create');
     // Route::get ('/portafolio/{project}/editar', 'ProjectController@edit')->name('projects.edit');
@@ -19,8 +18,13 @@ Route::resource('portafolio', 'ProjectController')
     // Route::post ('/portafolio', 'ProjectController@store')->name('projects.store');
     // Route::get ('/portafolio/{project}', 'ProjectController@show')->name('projects.show');
     // Route::delete ('/portafolio/{project}', 'ProjectController@destroy')->name('projects.destroy');
+    
 Route::post ('contact', 'MessageController@store')-> name('messages.store');
 Route::view('/contacto', 'contact')->name('contact');
+
+
+Auth::routes(['register' => false]);
+
 
 // Route::view ('projects', 'PortFolioController')->except(['index', 'show']);
 
@@ -79,3 +83,4 @@ Route::view('/contacto', 'contact')->name('contact');
     //     return "Saludos " . $nombre;
 
     // });
+

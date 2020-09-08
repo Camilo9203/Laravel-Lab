@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title','About')
+@section('title',__('About'))
 @section('content')
-    <h1>About</h1>
+    <h1>@lang('About')</h1>
 @endsection

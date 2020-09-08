@@ -13,7 +13,8 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.24",
-        "laravel/tinker": "^2.0"
+        "laravel/tinker": "^2.0",
+        "laravel/ui": "^2.2"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
@@ -33,17 +34,17 @@
         }
     },
     "autoload": {
+
         "psr-4": {
             "App\\": "app/"
         },
 
-        "files":["app/helpers.php"],
-
-
         "classmap": [
             "database/seeds",
             "database/factories"
-        ]
+        ],
+
+        "files":["app/helpers.php"]
     },
     "autoload-dev": {
         "psr-4": {

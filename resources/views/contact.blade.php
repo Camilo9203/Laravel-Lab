@@ -1,19 +1,9 @@
 @extends('layout')
-@section('title','Contact')
+@section('title',__('Contact'))
 @section('content')
+
     <h1>{{ __('Contact') }}</h1>
 
-    {{-- @if ($errors->any())
-        <ul>
-        @foreach ($errors->all() as $error)
-
-            <li>{{ $error }}<li>
-            
-        @endforeach
-        </ul>
-    @endif --}}
-
-    
     <form action="{{ route('messages.store')}}" method="POST">
         
         @csrf 
@@ -32,6 +22,16 @@
         <button>@lang('Send')</button><br>
 
     </form>
-
-
+    
 @endsection
+
+{{-- Comprobar errores por medio de IF --}}
+   {{-- @if ($errors->any())
+        <ul>
+        @foreach ($errors->all() as $error)
+
+            <li>{{ $error }}<li>
+        
+        @endforeach
+        </ul>
+    @endif --}}

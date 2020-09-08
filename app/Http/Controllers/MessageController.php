@@ -33,7 +33,7 @@ class MessageController extends Controller
 
         // return new MessageReceived($msg);
 
-        return 'Mensaje Recibido';
+        return back()->with('status', 'Recibimos tu mensaje');
     }
 
 }
