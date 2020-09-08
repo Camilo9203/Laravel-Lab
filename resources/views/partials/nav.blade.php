@@ -9,7 +9,7 @@
     
     <ul class="nav nav-pills">
         <li class="nav-item"><a class="nav-link {{ setActive('home') }}" href="{{ route('home') }}">@lang('Home')</a></li>
-        <li class="nav-item"><a class="nav-link {{ setActive('about') }}" ref="{{ route ('about') }}">@lang('About')</a></li>
+        <li class="nav-item"><a class="nav-link {{ setActive('about') }}" href="{{ route ('about') }}">@lang('About')</a></li>
         <li class="nav-item"><a class="nav-link {{ setActive('projects.*') }}" href="{{ route ('projects.index') }}">@lang('Projects')</a></li>
         <li class="nav-item"><a class="nav-link {{ setActive('contact') }}" href="{{ route ('contact') }}">@lang('Contact')</a></li>
         @guest

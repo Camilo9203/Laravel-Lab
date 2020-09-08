@@ -8,6 +8,8 @@
         {{ auth()->user()->name }}
     @endauth
     
+    {{ setActive('home') }}
+    
 @endsection
 
 
