@@ -8,7 +8,6 @@
 @import '~bootstrap/scss/bootstrap';
 
 
-.active a {
-    color: red;
-    text-decoration: none;
-}   
+.h-screen {
+    height: 100vh;
+}
