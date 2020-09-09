@@ -17,7 +17,7 @@
             ria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+        {{-- Links --}}
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav nav-pills nav-fill">
                 <li class="nav-item"><a class="nav-link {{ setActive('home') }}" href="{{ route('home') }}">@lang('Home')</a></li>

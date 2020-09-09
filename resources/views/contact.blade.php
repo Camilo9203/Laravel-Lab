@@ -7,12 +7,11 @@
 
     <div class="row">
         <div class="col-12 col-sm-10 col-lg-6 mx-auto">
-            <form class="bg-whit shadow rounded py-3 px-4" 
+            <form class="bg-white shadow rounded py-3 px-4" 
                 method="POST"  
                 action="{{ route('messages.store')}}">
 
                 @csrf 
-
                 <h1 class="display-4">{{ __('Contact') }}</h1>
                 <hr>
                 {{-- Nombre --}}

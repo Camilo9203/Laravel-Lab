@@ -4,7 +4,7 @@
 //8. Envio de Variables atravez de URL's
 
 Route::view ('/', 'home')->name('home');
-Route::view ('/about', 'about')->name('about');
+Route::view ('/acerca', 'about')->name('about');
 
 Route::resource('portafolio', 'ProjectController')
     ->names('projects')
