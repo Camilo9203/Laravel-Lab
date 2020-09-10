@@ -13,7 +13,7 @@
                 Regresar</a>
             @auth
 
-                <div class="btn-group">
+                <div class="btn-group btn-group-sm">
                     <a class="btn btn-primary" href="{{ route('projects.edit', $project) }}"> Editar</a>
                     <a class="btn btn-danger" href="#" onclick="document.getElementById('delete-project')">Eliminar</a>
                 </div>

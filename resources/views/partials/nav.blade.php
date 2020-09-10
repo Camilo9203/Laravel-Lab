@@ -8,7 +8,7 @@
             {{ config('app.name') }}
 
         </a>
-        
+        {{-- Button toggler --}}
         <button class="navbar-toggler" type="button" 
             data-toggle="collapse" 
             data-target="#navbarSupportedContent" 
@@ -30,10 +30,15 @@
                 
                 @else 
 
-                    <li class="nav-item"><a class="nav-link {{ setActive('logout') }}" href="#" onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
-                        
-                        @lang ('Logout')</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ setActive('logout') }}" 
+                            href="#" 
+                            onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                    
+                            @lang ('Logout')
+                        </a>
+                    </li>
                 
                 @endguest
             </ul>

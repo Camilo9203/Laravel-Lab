@@ -1,7 +1,7 @@
     {{-- Mostrar todos los errores  --}}
     @if ($errors->any())
-
-        <ul>
+    <div class="alert alert-danger">
+        <ul class="m-0">
 
             @foreach ($errors->all() as $error)
                 
@@ -10,5 +10,5 @@
             @endforeach
 
         </ul>
-        
+    </div>
     @endif
