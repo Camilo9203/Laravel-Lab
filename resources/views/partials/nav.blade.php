@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light bg-white navbar-expand-lg shadow-sm">
+<nav class="navbar sticky-top navbar-light bg-light navbar-expand-lg shadow-sm">
         {{-- Recoger datos  --}}
         {{-- {{ dump(request()->routeIs('about')) }} --}}
     <div class="container">
@@ -18,7 +18,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         {{-- Links --}}
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse mx-auto" id="navbarSupportedContent">
             <ul class="nav nav-pills nav-fill">
                 <li class="nav-item"><a class="nav-link {{ setActive('home') }}" href="{{ route('home') }}">@lang('Home')</a></li>
                 <li class="nav-item"><a class="nav-link {{ setActive('about') }}" href="{{ route ('about') }}">@lang('About')</a></li>
@@ -43,6 +43,8 @@
                 @endguest
             </ul>
         </div>
+
+
     </div>
 </nav>
 

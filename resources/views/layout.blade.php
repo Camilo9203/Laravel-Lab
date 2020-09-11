@@ -15,15 +15,16 @@
 </head>
 <body>
     
-    <div id="app" class="d-flex flex-column h-screen justify-content-between">
+    <div id="app" class="d-flex h-screen flex-column justify-content-between">
 
         <header>
             @include('partials.nav')
             @include('partials.session-status')
+                     
         </header>
 
 
-        <main class="py-4">
+        <main role="main">
             @yield('content')
         </main>
         

@@ -2,7 +2,7 @@
 @section('title','Portfolio |' . $project->title)
 
 @section('content')
-<div class="container">
+<div class="container py-5">
     <div class="bg-white p-5 shadow rounded">
         <h1>{{ $project->title }}</h1>
         <p class="text-secondary">{{ $project->description}}</p>
