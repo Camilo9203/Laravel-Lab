@@ -17,7 +17,7 @@
       
       <p>Recibiste un mensaje de {{ $msg['name'] }} - {{ $msg['email'] }}</p>
       <p><strong>Asunto:</strong> {{ $msg['subject'] }}</p>
-      <p><strong>Asunto:</strong> {{ $msg['content'] }}</p>
+      <p><strong>Contenido:</strong> {{ $msg['content'] }}</p>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

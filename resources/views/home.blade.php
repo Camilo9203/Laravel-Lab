@@ -10,6 +10,7 @@
         
         <div class="row">
             <div class="col-12 col-lg-6">
+            @lang('Home')
                 <h1 class="display-4 text-primary">@lang('Desarollo Web')</h1>
                 <p class="lead text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing 
                     elit. Ex quod consectetur, maiores repudiandae, delectus omnis sunt temporibus 
