@@ -4,7 +4,7 @@
         customers with this Bootstrap example. It's built with default Bootstrap 
         components and utilities with little customization.</p>
 </div>
-a
+
 <div class="container">
     <div class="card-deck mb-3 text-center">
       <div class="card mb-4 col-sm-12  col-md-6 col-lg-4 box-shadow shadow">

@@ -1,5 +1,7 @@
 <?php
     
+    use Illuminate\Support\Facades\Route;
+
 
 //8. Envio de Variables atravez de URL's
 
@@ -78,9 +80,9 @@ Auth::routes(['register' => false]);
 
 
 
-    // Route::get('saludo/{nombre?}', function ($nombre = "Invitado") {
+    Route::get('saludo/{nombre?}', function ($nombre = "Invitado") {
 
-    //     return "Saludos " . $nombre;
+        return "Saludos " . $nombre;
 
-    // });
+    });
 
