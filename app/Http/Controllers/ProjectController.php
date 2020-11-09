@@ -97,6 +97,7 @@ class ProjectController extends Controller
     {
         return view('projects.edit', [
             
+            
             'project' => $project
         
         ]);
@@ -106,7 +107,6 @@ class ProjectController extends Controller
     {
         
         $project->update ($request->validated());
-
         return redirect()->route('projects.show', $project)->with('status', 'Tu proyecto fue actualizado con exito');
     }
 
